@@ -1,0 +1,193 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: RT Liu, ARM, LIC=NQQMA-1NXRK-2ZNW4-FFGB7-95MI1-P7TPK
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      Segger\JL2CM3.dll V2.99.40.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Lx201\Documents\Y2_learn_III\adc\adc_d\adc.uvprojx
+Project File Date:  06/27/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+My_adc.c(1): warning: In file included from...
+./My_adc.h(2): warning: In file included from...
+C:/Users/Lx201/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C8\stm32f10x_conf.h(30): warning: In file included from...
+C:/Users/Lx201/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_adc.h(63): warning: padding struct 'ADC_InitTypeDef' with 2 bytes to align 'ADC_ExternalTrigConv' [-Wpadded]
+  uint32_t ADC_ExternalTrigConv;          /*!< Defines the external trigger used to start the analog
+           ^
+C:/Users/Lx201/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_adc.h(49): warning: padding size of 'ADC_InitTypeDef' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+My_adc.c(53): warning: no previous prototype for function 'ADC1_2_IRQHandler' [-Wmissing-prototypes]
+void ADC1_2_IRQHandler()
+     ^
+My_adc.c(53): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ADC1_2_IRQHandler()
+^
+static 
+My_adc.c(53): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void ADC1_2_IRQHandler()
+                      ^
+My_adc.c(64): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+        float k=(float)data/4096*3.3;
+              ~ ~~~~~~~~~~~~~~~~^~~~
+My_adc.c(64): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        float k=(float)data/4096*3.3;
+                ~~~~~~~~~~~^~~~~~
+My_adc.c(4): warning: no previous extern declaration for non-static variable 'adc_data' [-Wmissing-variable-declarations]
+uint16_t adc_data;
+         ^
+My_adc.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t adc_data;
+^
+7 warnings generated.
+compiling My_adc.c...
+C:/Users/Lx201/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/src/misc.c(131): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+                                               ~ ^~~~~~~~~~~
+1 warning generated.
+compiling misc.c...
+compiling stm32f10x_rcc.c...
+MIAN.c(6): warning: no previous prototype for function 'D_init' [-Wmissing-prototypes]
+void D_init()
+     ^
+MIAN.c(6): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void D_init()
+^
+static 
+MIAN.c(6): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void D_init()
+           ^
+MIAN.c(16): warning: no previous prototype for function 'set_data' [-Wmissing-prototypes]
+void set_data(uint8_t bit, uint8_t data)//10<B4><FA><B1><ED><B5><E3>
+     ^
+MIAN.c(16): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void set_data(uint8_t bit, uint8_t data)//10<B4><FA><B1><ED><B5><E3>
+^
+static 
+MIAN.c(44): warning: no previous prototype for function 'showL' [-Wmissing-prototypes]
+void showL(uint8_t data[])
+     ^
+MIAN.c(44): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void showL(uint8_t data[])
+^
+static 
+MIAN.c(56): warning: no previous prototype for function 'show_x5msV2' [-Wmissing-prototypes]
+void show_x5msV2(uint16_t msx5,uint16_t data)//时<BC><E4>x5ms<A3><AC><CF><D4>示<CA><FD><BE><DD>
+     ^
+MIAN.c(56): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void show_x5msV2(uint16_t msx5,uint16_t data)//时<BC><E4>x5ms<A3><AC><CF><D4>示<CA><FD><BE><DD>
+^
+static 
+MIAN.c(106): warning: implicit conversion turns floating-point number into integer: 'float' to 'uint16_t' (aka 'unsigned short') [-Wfloat-conversion]
+                uint16_t outnum=out;
+                         ~~~~~~ ^~~
+6 warnings generated.
+compiling MIAN.c...
+delay.c(9): warning: implicit conversion loses integer precision: 'unsigned int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        fac_us=SystemCoreClock/8000000;                         //为系统时<D6>拥<C4>1/8  
+              ~~~~~~~~~~~~~~~~^~~~~~~~
+delay.c(68): warning: no newline at end of file [-Wnewline-eof]
+*/
+  ^
+2 warnings generated.
+compiling delay.c...
+compiling stm32f10x_gpio.c...
+C:/Users/Lx201/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/src/stm32f10x_adc.c(22): warning: In file included from...
+C:/Users/Lx201/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_adc.h(63): warning: padding struct 'ADC_InitTypeDef' with 2 bytes to align 'ADC_ExternalTrigConv' [-Wpadded]
+  uint32_t ADC_ExternalTrigConv;          /*!< Defines the external trigger used to start the analog
+           ^
+C:/Users/Lx201/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.0/Device/StdPeriph_Driver/inc\stm32f10x_adc.h(49): warning: padding size of 'ADC_InitTypeDef' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+2 warnings generated.
+compiling stm32f10x_adc.c...
+linking...
+Program Size: Code=5980 RO-data=268 RW-data=4 ZI-data=1644  
+".\Objects\adc.axf" - 0 Error(s), 19 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+   * Component: ADC Version: 3.6.0
+   * Component: Framework Version: 3.6.0
+   * Component: GPIO Version: 3.6.0
+   * Component: RCC Version: 3.6.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\_Target_1
+  C:\Users\Lx201\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  C:\Users\Lx201\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+  C:\Users\Lx201\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\StdPeriph_Driver\inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\system_stm32f10x.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+
+   * Component: Keil::Device:StdPeriph Drivers:ADC:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_adc.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_adc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
